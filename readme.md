@@ -1,6 +1,6 @@
-# rabbitmq-rpc
+# rpc-rabbitmq
 
-[![npm version](https://img.shields.io/npm/v/rabbitmq-rpc.svg)](https://npm.im/rabbitmq-rpc) ![Licence](https://img.shields.io/npm/l/rabbitmq-rpc.svg) [![Github issues](https://img.shields.io/github/issues/danielmeneses/rabbitmq-rpc.svg)](https://github.com/danielmeneses/rabbitmq-rpc/issues) [![Github stars](https://img.shields.io/github/stars/danielmeneses/rabbitmq-rpc.svg)](https://github.com/danielmeneses/rabbitmq-rpc/stargazers)
+[![npm version](https://img.shields.io/npm/v/rpc-rabbitmq.svg)](https://npm.im/rpc-rabbitmq) ![Licence](https://img.shields.io/npm/l/rpc-rabbitmq.svg) [![Github issues](https://img.shields.io/github/issues/danielmeneses/rpc-rabbitmq.svg)](https://github.com/danielmeneses/rpc-rabbitmq/issues) [![Github stars](https://img.shields.io/github/stars/danielmeneses/rpc-rabbitmq.svg)](https://github.com/danielmeneses/rpc-rabbitmq/stargazers)
 
 RPC pattern with RabbitMQ
 
@@ -16,7 +16,7 @@ RPC pattern with RabbitMQ
 ### Install
 
 ```bash
-npm i rabbitmq-rpc --save-prod
+npm i rpc-rabbitmq --save-prod
 ```
 
 ### RPC client example
@@ -24,7 +24,7 @@ npm i rabbitmq-rpc --save-prod
 You just need to define the methods that the client will use. This methods should be implemented in the server-side version.
 
 ```js
-const { ClientRPC } = require('rabbitmq-rpc');
+const { ClientRPC } = require('rpc-rabbitmq');
 
 class Client extends ClientRPC {
   async getBooks() {}
@@ -60,7 +60,7 @@ const client = new Client('clientName', 'amqp://rabbitmq:rabbitmq@localhost:5672
 ### RPC server example
 
 ```js
-const { ServerRPC } = require('rabbitmq-rpc');
+const { ServerRPC } = require('rpc-rabbitmq');
 
 // simulating a books datasource
 const books = [
@@ -98,7 +98,7 @@ The library also abstracts 2 more patterns, Work and Pub-Sub.
 #### Simple Worker
 
 ```js
-const { Publisher, Consumer } = require('rabbitmq-rpc');
+const { Publisher, Consumer } = require('rpc-rabbitmq');
 
 const publisher = new Publisher(
   'publisherConn',
@@ -144,7 +144,7 @@ const consumer1 = new Consumer(
 #### Pub-Sub
 
 ```js
-const { Publisher, Consumer } = require('rabbitmq-rpc');
+const { Publisher, Consumer } = require('rpc-rabbitmq');
 
 const publisher = new Publisher(
   'publisher',
