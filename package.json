@@ -1,6 +1,6 @@
 {
   "name": "rpc-rabbitmq",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RPC pattern for RabbitMQ/AMQP",
   "main": "lib/index.js",
   "author": "Daniel Meneses <pro.danielmeneses@gmail.com>",
