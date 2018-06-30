@@ -3,12 +3,12 @@ const Consumer = require('../lib/Comsumer');
 
 const publisher = new Publisher(
   'publisher',
-  'amqp://mobidea-com:mobidea-com@localhost:5672'
+  'amqp://rabbitmq:rabbitmq@localhost:5672'
 );
 
 const subscriber = new Consumer(
   'subscriber',
-  'amqp://mobidea-com:mobidea-com@localhost:5672'
+  'amqp://rabbitmq:rabbitmq@localhost:5672'
 );
 
 (async function() {

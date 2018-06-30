@@ -102,12 +102,12 @@ const { Publisher, Consumer } = require('rpc-rabbitmq');
 
 const publisher = new Publisher(
   'publisherConn',
-  'amqp://mobidea-com:mobidea-com@localhost:5672'
+  'amqp://rabbitmq:rabbitmq@localhost:5672'
 );
 
 const consumer1 = new Consumer(
   'consumer1',
-  'amqp://mobidea-com:mobidea-com@localhost:5672'
+  'amqp://rabbitmq:rabbitmq@localhost:5672'
 );
 
 (async function() {
@@ -148,12 +148,12 @@ const { Publisher, Consumer } = require('rpc-rabbitmq');
 
 const publisher = new Publisher(
   'publisher',
-  'amqp://mobidea-com:mobidea-com@localhost:5672'
+  'amqp://rabbitmq:rabbitmq@localhost:5672'
 );
 
 const subscriber = new Consumer(
   'subscriber',
-  'amqp://mobidea-com:mobidea-com@localhost:5672'
+  'amqp://rabbitmq:rabbitmq@localhost:5672'
 );
 
 (async function() {
